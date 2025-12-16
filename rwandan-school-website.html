@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kigali Excellence School - Quality Education for Nursery, Primary and Secondary Students in Rwanda">
+    <meta name="keywords" content="school, education, Rwanda, Kigali, nursery, primary, secondary">
+    <title>Kigali Excellence School - Quality Education in Rwanda</title>
+    <style>
+        /* ============================================
+           RESET AND BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            color: #1a4d7a;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #004a99;
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           HEADER AND NAVIGATION
+           ============================================ */
+        header {
+            background-color: #1a4d7a;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ff6b35;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6b35;
+            text-decoration: none;
+            border-bottom-color: #ff6b35;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ============================================
+           MAIN CONTENT CONTAINER
+           ============================================ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            background: linear-gradient(135deg, #1a4d7a 0%, #2a6fa0 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #e55a24;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* ============================================
+           CARDS AND GRID LAYOUTS
+           ============================================ */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #1a4d7a;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================
+           SECTIONS WITH ALTERNATING BACKGROUNDS
+           ============================================ */
+        section:nth-child(even) {
+            background-color: #f0f5fa;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .about-text h3 {
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #1a4d7a, #2a6fa0);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        /* ============================================
+           MISSION AND VISION
+           ============================================ */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mission-box, .vision-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid #ff6b35;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-box h3, .vision-box h3 {
+            color: #1a4d7a;
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================
+           PROGRAMS SECTION
+           ============================================ */
+        .program-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #ff6b35;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-card h3 {
+            color: #1a4d7a;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .program-card .age-range {
+            background-color: #e8f4f8;
+            color: #1a4d7a;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .program-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .program-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .program-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        /* ============================================
+           ADMISSIONS SECTION
+           ============================================ */
+        .requirements {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .requirements h3 {
+            color: #1a4d7a;
+            margin-bottom: 1rem;
+        }
+
+        .requirements ol {
+            margin-left: 2rem;
+            line-height: 2;
+        }
+
+        .requirements li {
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #ff6b35;
+        }
+
+        .timeline-item .month {
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #1a4d7a;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item strong {
+            color: #ff6b35;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h3 {
+            color: #1a4d7a;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+            box-shadow: 0 0 5px rgba(255, 107, 53, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background-color: #ff6b35;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #e55a24;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background-color: #1a4d7a;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #1a4d7a;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content,
+            .mission-vision,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 200px;
+                padding: 2rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            .grid,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .card,
+            .program-card,
+            .contact-info,
+            .contact-form,
+            .mission-box,
+            .vision-box {
+                padding: 1.5rem;
+            }
+
+            section {
+                padding: 1.5rem 0;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* ============================================
+           UTILITY CLASSES
+           ============================================ */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER AND NAVIGATION
+         ============================================ -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">🎓</div>
+                <span>Kigali Excellence School</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#programs">Programs</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to Kigali Excellence School</h1>
+            <p>Quality Education for Nursery, Primary, and Secondary Students</p>
+            <p style="font-size: 1rem; color: #d0d0d0; margin-bottom: 2rem;">Building Bright Futures Through Excellence and Character Development</p>
+            <a href="#admissions" class="cta-button">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT US SECTION
+         ============================================ -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Kigali Excellence School is a leading educational institution in Rwanda, committed to providing quality, affordable education to students from all backgrounds. Since our establishment, we have been dedicated to nurturing young minds and developing responsible citizens who contribute positively to society.</p>
+                    <p>We believe that every child deserves access to quality education regardless of their socioeconomic background. Our school operates on the principle that education is a fundamental right and a pathway to breaking the cycle of poverty.</p>
+                    <p>In alignment with Rwanda's Vision 2050 and the national education policy, we focus on developing critical thinking, creativity, and practical skills that prepare our students for the challenges of the modern world.</p>
+                </div>
+                <div class="about-image">
+                    🏫
+                </div>
+            </div>
+
+            <!-- Mission and Vision -->
+            <div class="mission-vision">
+                <div class="mission-box">
+                    <h3>Our Mission</h3>
+                    <p>To provide quality, accessible, and affordable education that develops well-rounded individuals with strong academic foundations, moral values, and practical skills necessary for success in higher education and the workplace.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Our Vision</h3>
+                    <p>To be Rwanda's leading institution for quality education, recognized for producing graduates who are academically excellent, morally upright, and equipped to drive national development and contribute to the global community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROGRAMS SECTION
+         ============================================ -->
+    <section id="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">We offer comprehensive education from Nursery through Secondary School, tailored to meet the needs of each developmental stage.</p>
+            
+            <div class="grid">
+                <!-- Nursery Program -->
+                <div class="program-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">👶</div>
+                    <h3>Nursery Program</h3>
+                    <span class="age-range">Ages 3-5 Years</span>
+                    <p>Our Nursery program focuses on early childhood development through play-based learning. We create a safe, nurturing environment where children develop social skills, basic literacy, and numeracy concepts.</p>
+                    <ul class="program-features">
+                        <li>Play-based learning approach</li>
+                        <li>Language development</li>
+                        <li>Basic numeracy skills</li>
+                        <li>Social and emotional development</li>
+                        <li>Creative activities and arts</li>
+                        <li>Physical education and sports</li>
+                    </ul>
+                </div>
+
+                <!-- Primary Program -->
+                <div class="program-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📚</div>
+                    <h3>Primary Program</h3>
+                    <span class="age-range">Ages 6-12 Years</span>
+                    <p>Our Primary program provides a strong foundation in core academic subjects while developing critical thinking and problem-solving skills. We emphasize both academic excellence and character development.</p>
+                    <ul class="program-features">
+                        <li>English language and literature</li>
+                        <li>Mathematics and numeracy</li>
+                        <li>Science and nature studies</li>
+                        <li>Social studies and geography</li>
+                        <li>Computer skills and ICT</li>
+                        <li>Sports, arts, and music</li>
+                    </ul>
+                </div>
+
+                <!-- Secondary Program -->
+                <div class="program-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎓</div>
+                    <h3>Secondary Program</h3>
+                    <span class="age-range">Ages 13-18 Years</span>
+                    <p>Our Secondary program prepares students for national examinations and higher education. We offer a comprehensive curriculum with emphasis on STEM subjects, languages, and humanities, preparing students for university and professional careers.</p>
+                    <ul class="program-features">
+                        <li>Advanced mathematics and sciences</li>
+                        <li>English and French languages</li>
+                        <li>History, geography, and civics</li>
+                        <li>Business and economics</li>
+                        <li>Laboratory and practical skills</li>
+                        <li>Career guidance and counseling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ADMISSIONS SECTION
+         ============================================ -->
+    <section id="admissions">
+        <div class="container">
+            <h2>Admissions</h2>
+            
+            <div class="requirements">
+                <h3>Admission Requirements</h3>
+                <p>We welcome applications from students of all backgrounds. Here are the basic requirements for admission:</p>
+                <ol>
+                    <li><strong>Birth Certificate:</strong> Original or certified copy</li>
+                    <li><strong>Previous School Report:</strong> Academic records from previous school (if applicable)</li>
+                    <li><strong>Medical Report:</strong> Current health examination report</li>
+                    <li><strong>Parental Information:</strong> Contact details and identification documents</li>
+                    <li><strong>Entrance Assessment:</strong> Students may be required to sit for placement tests</li>
+                    <li><strong>Application Form:</strong> Completed school application form</li>
+                    <li><strong>School Fees:</strong> Payment of registration and first term fees</li>
+                </ol>
+            </div>
+
+            <h3 style="margin-top: 2rem;">Admission Timeline</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="month">January - February</div>
+                    <p>Application Period Opens</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="month">March - April</div>
+                    <p>Entrance Assessments</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="month">May</div>
+                    <p>Results Announcement</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="month">June</div>
+                    <p>Enrollment and Orientation</p>
+                </div>
+            </div>
+
+            <div class="requirements" style="margin-top: 2rem;">
+                <h3>School Fees</h3>
+                <p>We are committed to providing affordable quality education. Our fees are structured to be accessible to families across different income levels:</p>
+                <ul style="margin-left: 2rem; line-height: 2;">
+                    <li><strong>Nursery:</strong> RWF 200,000 - 300,000 per term</li>
+                    <li><strong>Primary:</strong> RWF 250,000 - 400,000 per term</li>
+                    <li><strong>Secondary:</strong> RWF 350,000 - 500,000 per term</li>
+                </ul>
+                <p style="margin-top: 1rem;"><em>Note: Scholarships and payment plans are available for qualified students. Contact our admissions office for more information.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <strong>📍 Location</strong>
+                        <p>Kigali Excellence School<br>
+                        Kacyiru District<br>
+                        Kigali City, Rwanda</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>📞 Phone</strong>
+                        <p>+250 788 123 456<br>
+                        +250 722 456 789</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>✉️ Email</strong>
+                        <p>info@kigaliexcellence.rw<br>
+                        admissions@kigaliexcellence.rw</p>
+                    </div>
+
+                    <div class="contact-item">
+                        <strong>🕐 Office Hours</strong>
+                        <p>Monday - Friday: 8:00 AM - 4:00 PM<br>
+                        Saturday: 9:00 AM - 12:00 PM<br>
+                        Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <h3>Send us a Message</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#programs">Programs</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Kigali Excellence School. All rights reserved.</p>
+                <p>Committed to Quality Education in Rwanda | Building Bright Futures</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT FOR INTERACTIVITY
+         ============================================ -->
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation
+            if (name && email && subject && message) {
+                // In a real application, this would send data to a server
+                alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+                
+                // Reset form
+                event.target.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        }
+
+        // Smooth scroll behavior for older browsers
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
